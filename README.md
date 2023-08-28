@@ -1,2 +1,2 @@
 # c-programs
-Personal C {rogramming Practice
+Personal C programming Practice

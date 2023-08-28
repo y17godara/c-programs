@@ -1,0 +1,6 @@
+#Custom
+
+
+#Output files
+*.exe
+*.o
