@@ -1,2 +1,2 @@
-# c-programs
-Personal C programming Practice
+# programs
+Personal Programming Practice
