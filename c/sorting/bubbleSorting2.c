@@ -1,6 +1,4 @@
-//smallest to largest
-// Time Complexity: O(N2)
-// Auxiliary Space: O(1)
+//largest to smallest
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -48,7 +46,7 @@ void bubbleSorting(int arr[], int N)
         for (int j = 0; j < N - i - 1; j++)
         {
             // sort
-            if (arr[j] > arr[j + 1])
+            if (arr[j] < arr[j + 1])
             {
                 swap(&arr[j], &arr[j + 1]);
                 swapped = true;
