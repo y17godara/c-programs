@@ -4,3 +4,4 @@
 #Output files
 *.exe
 *.o
+*.class
