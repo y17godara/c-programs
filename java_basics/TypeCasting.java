@@ -1,7 +1,7 @@
-public class TypeConversion {
+public class TypeCasting {
     public static void main(String args[]) {
         int a = 10;
-        double b = a; // automatic type conversion
+        double b = (double) a; // manual type conversion
         System.out.println(a);
         System.out.println(b);
         double c = 10.5;
@@ -11,6 +11,6 @@ public class TypeConversion {
     }
 }
 
-// conditions for type conversion
+// conditions for type casting
 // a. type compatibility
 // b. size of the data type { destination data type should be larger than source data type }
