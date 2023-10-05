@@ -13,7 +13,21 @@ void printHallowRectangle(int row, int col, char ch){
   }
 }
 
+void invertedRoatatedHaldPyramid(int row, char ch) {
+    
+}
+
 int main() {
   printHallowRectangle(10, 14, '#');
+  invertedRoatatedHaldPyramid(7, '#');
+  invertedHalfPyramid();
+  floydsTriangle();
+  zeroOneTriangle();
+  butterflyPattern();
+  solidRhombus();
+  hallowRhombus();
+  diamondPattern();
+  numberPyramid();
+  palindromicPattern();
   return 0;
 } 
