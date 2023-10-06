@@ -25,11 +25,31 @@ void invertedRoatatedHaldPyramid(int row) {
     }
 }
 
+void invertedHalfPyramid(int n) {
+  for(int i=1; i<=n; i++) {
+    for(int j=1; j<=n-i+1; j++) {
+      printf("%d", j);
+    }
+    printf("\n");
+  }
+}
+
+void floydsTriangle(int n) {
+  int count = 1;
+  for(int i=1; i<=n; i++){
+      for(int j=1; j<=1; j++) {
+        printf("%d", count);
+        count++;
+      }
+      printf("\n");
+  }
+}
+
 int main() {
   // printHallowRectangle(10, 14, '#');
-  invertedRoatatedHaldPyramid(4);
-  // invertedHalfPyramid();
-  // floydsTriangle();
+  // invertedRoatatedHaldPyramid(4);
+  // invertedHalfPyramid(5);
+  floydsTriangle(5);
   // zeroOneTriangle();
   // butterflyPattern();
   // solidRhombus();
