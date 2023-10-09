@@ -2,7 +2,10 @@
 using namespace std;
 
 int reverseArray(int arr[], int size) {
-    
+    while (size > 0) {
+        cout << arr[size - 1] << " ";
+        size--;
+    }
 }
 
 int main(void) {
