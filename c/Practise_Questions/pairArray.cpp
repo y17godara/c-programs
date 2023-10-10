@@ -2,7 +2,11 @@
 using namespace std;
 
 int pairArray(int arr[], int size) {
-    
+    for(int i; i<=size-1; i++){
+        for(int j=0; j<=i; j++){
+            cout << "(" << i << "," << j << ")";
+        }
+    }
 }
 
 int main() {

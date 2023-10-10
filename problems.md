@@ -6,3 +6,5 @@
 6. max subarray sum { prefix sum }
 7. trapping rainwater
 8. best time to buy and sell stock
+9. print true of key appears atleast twice in array
+10. print sum of largest sub array
