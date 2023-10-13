@@ -3,8 +3,8 @@ public class arraySort {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 1, 4, 5, 2, 3, 3, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 };
         // arrbubleSort(arr);
-        arrSelectionSort(arr);
-        // arrInsetionSort(arr);
+        // arrSelectionSort(arr);
+        arrInsertionSort(arr);
     }
 
     public static void arrayPrint(int[] arr) {
@@ -44,8 +44,17 @@ public class arraySort {
         arrayPrint(arr);
     }
 
-    public static void arrInsetionSort(int[] arr) {
-
+    public static void arrInsertionSort(int[] arr) {
+        for(int i=1; i<=arr.length-1; i++){
+            int temp = arr[i];
+            int j = i-1;
+            while(j>=0 && arr[j]>temp){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = temp;
+        }
+        arrayPrint(arr);
     }
 
 }
