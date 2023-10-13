@@ -1,7 +1,7 @@
 public class arraySort {
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 1, 4, 5, 2, 3, 6 };
+        int[] arr = { 1, 2, 3, 1, 4, 5, 2, 3, 3, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 };
         // arrbubleSort(arr);
         arrSelectionSort(arr);
         // arrInsetionSort(arr);
@@ -31,7 +31,7 @@ public class arraySort {
     public static void arrSelectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < arr.length - 2; j++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[min]) {
                     min = j;
                 }
