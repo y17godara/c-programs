@@ -4,7 +4,8 @@ public class arraySort {
         int[] arr = { 1, 2, 3, 1, 4, 5, 2, 3, 3, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5 };
         // arrbubleSort(arr);
         // arrSelectionSort(arr);
-        arrInsertionSort(arr);
+        // arrInsertionSort(arr);
+        arrCountringSort(arr);
     }
 
     public static void arrayPrint(int[] arr) {
@@ -53,6 +54,28 @@ public class arraySort {
                 j--;
             }
             arr[j+1] = temp;
+        }
+        arrayPrint(arr);
+    }
+
+    public static void arrCountringSort(int[] arr) {
+        int largest = Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++){
+            largest = Math.max(largest, arr[i]);
+        }
+
+        int[] freq = new int[largest+1];
+        for(int i=0; i<arr.length; i++){
+            freq[arr[i]]++;
+        }
+
+        int j=0;
+        for(int i=0; i<freq.length; i++){
+            while(freq[i]>0){
+                arr[j] = i;
+                freq[i]--;
+                j++;
+            }
         }
         arrayPrint(arr);
     }
