@@ -9,6 +9,7 @@ public class TypeConversion {
         System.out.println(c);
         System.out.println(d);
     }
+    
 }
 
 // conditions for type conversion
