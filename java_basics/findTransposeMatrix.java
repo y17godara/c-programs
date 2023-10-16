@@ -15,8 +15,13 @@ public class findTransposeMatrix {
         }
     }
 
+    public static void transposeMatrix(int ar[][]){
+        
+    }
+
     public static void main(String args[]){
         int a[][] = { { 1, 4, 9 }, { 11, 4, 3 }};
         transpose(a);
+        transposeMatrix(a);
     }
 }
