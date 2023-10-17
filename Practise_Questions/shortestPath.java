@@ -1,8 +1,8 @@
 package Practise_Questions;
 
 public class shortestPath {
-    
-    public static void shortestPathFinder(String s) {
+
+    public static float shortestPathFinder(String s) {
         int x = 0;
         int y = 0;
 
@@ -10,24 +10,28 @@ public class shortestPath {
             char dir = s.charAt(i);
             if (dir == 'N') {
                 y++;
-            } else if (dir  == 'S') {
+            } else if (dir == 'S') {
                 y--;
-            } else if (dir  == 'E') {
+            } else if (dir == 'E') {
                 x++;
-            } else if (dir  == 'W') {
+            } else if (dir == 'W') {
                 x--;
-            }
-            else{
-                
+            } else {
                 System.out.println("Wrong Input!");
+                return -1;
             }
         }
 
-        System.out.println("Value of X "+ x +" and Y "+ y);
+        System.out.println("Value of X " + x + " and Y " + y);
+        // Find displacement
+        int X2 = x*x;
+        int Y2 = y*y;
+        return (float)(Math.sqrt(X2 + Y2));
     }
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
         String path = "WNEENESENNN";
-        shortestPathFinder(path);
+        float dis = shortestPathFinder(path);
+        System.out.println(dis);
     }
 }
