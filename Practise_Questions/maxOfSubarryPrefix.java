@@ -1,4 +1,4 @@
-package c.Practise_Questions;
+package Practise_Questions;
 import java.util.*;
 
 public class maxOfSubarryPrefix {
