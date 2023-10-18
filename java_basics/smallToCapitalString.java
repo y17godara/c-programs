@@ -1,29 +1,29 @@
 public class smallToCapitalString {
 
-    public static String convertString(String str){
-        StringBuilder convertedString = new StringBuilder("");
+    public static String convertString(String str) {
+        StringBuilder titleCaseString = new StringBuilder("");
 
-        boolean capitalNext = true;
-        for(int i=0; i<str.length(); i++){
+        boolean capitalizeNext = true;
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if(Character.isWhitespace(c)){
-                convertedString.append(" ");
-                capitalNext = true;
-            } else if(capitalNext){
-                convertedString.append(Character.toUpperCase(c));
-                capitalNext = false;
+            if (Character.isWhitespace(c)) {
+                titleCaseString.append(" ");
+                capitalizeNext = true;
+            } else if (capitalizeNext) {
+                titleCaseString.append(Character.toUpperCase(c));
+                capitalizeNext = false;
             } else {
-                convertedString.append(c);
+                titleCaseString.append(c);
             }
         }
 
-        return convertedString.toString();
+        return titleCaseString.toString();
     }
-    
-    public static void main(String args[]){
-        String str = "my name is Devil dhink";
-        String convertedString = convertString(str);
 
-        System.out.println(convertedString);
+    public static void main(String args[]) {
+        String str = "my name is Devil dhink";
+        String titleCaseString = convertString(str);
+
+        System.out.println(titleCaseString);
     }
 }
