@@ -19,14 +19,20 @@ public class bitsManipulation {
     }
 
     public static int updateBit(int num, int k, int n) {
+        num = clearBit(num, k);
+        int bitMask = n << k;
+        return n | bitMask;
+    }
+
+    public static void fastExponentiation(int n){
         
     }
 
     public static void main(String args[]) {
         int x = 10;
-        System.out.println(getBit(x, 3));
-        System.out.println(setBit(x, 3));
-        System.out.println(clearBit(x, 3));
+        // System.out.println(getBit(x, 3));
+        // System.out.println(setBit(x, 3));
+        // System.out.println(clearBit(x, 3));
         System.out.println(updateBit(x, 3, 0));
     }
 }
