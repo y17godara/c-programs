@@ -33,27 +33,49 @@ public class RecursionBasics {
     // function: check if array is sorted
     public static boolean isArraySorted(int arr[], int index) {
 
-        if(arr.length-1 == index){
+        if (arr.length - 1 == index) {
             return true;
         }
 
-        if(arr[index] > arr[index+1]){
+        if (arr[index] > arr[index + 1]) {
             return false;
         }
-        return isArraySorted(arr, index+1);
+        return isArraySorted(arr, index + 1);
     }
 
     // function: get first occurance of a number in array
-    public static int firstOccurance(int arr[], int index, int num){
-        if(arr.length == index){
+    public static int firstOccurance(int arr[], int index, int num) {
+        if (arr.length == index) {
             return -1;
         }
 
-        if(arr[index] == num){
+        if (arr[index] == num) {
             return index;
         }
-        return firstOccurance(arr, index+1, num);
+        return firstOccurance(arr, index + 1, num);
     }
+
+    // function: get last occurance of a number in array
+    public static int lastOccurance(int[] arr, int index, int num) {
+        if (index == -1) {
+            return -1;
+        }
+
+        if (arr[index] == num) {
+            return index;
+        }
+
+        return lastOccurance(arr, index - 1, num);
+    }
+
+    // function: print x to the power n
+    public static int power(int x, int n) {
+        if (n == 0) {
+          return 1;
+        } else {
+          return x * power(x, n - 1);
+        }
+      }
 
     // main
     public static void main(String args[]) {
@@ -63,9 +85,15 @@ public class RecursionBasics {
         // System.out.println(getSumOfXNaturalNumber(num));
         // System.out.println(fabonacci(num));
 
-        int arr[] = {2,4,6,8,8};
+        // int arr[] = { 2, 4, 6, 8, 8 };
         // boolean isSorted = isArraySorted(arr, 0);
         // System.out.println(isSorted);
-        System.out.println(firstOccurance(arr, 0, 9));
+        // System.out.println(firstOccurance(arr, 0, 8));
+        // System.out.println(lastOccurance(arr, 4, 1));
+
+        // int n = 5;
+        // System.out.println(power(n, 3));
+
+        
     }
 }
