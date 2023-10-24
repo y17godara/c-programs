@@ -43,6 +43,18 @@ public class RecursionBasics {
         return isArraySorted(arr, index+1);
     }
 
+    // function: get first occurance of a number in array
+    public static int firstOccurance(int arr[], int index, int num){
+        if(arr.length == index){
+            return -1;
+        }
+
+        if(arr[index] == num){
+            return index;
+        }
+        return firstOccurance(arr, index+1, num);
+    }
+
     // main
     public static void main(String args[]) {
 
@@ -51,10 +63,9 @@ public class RecursionBasics {
         // System.out.println(getSumOfXNaturalNumber(num));
         // System.out.println(fabonacci(num));
 
-        // int arr[] = {2,4,6,8,8};
+        int arr[] = {2,4,6,8,8};
         // boolean isSorted = isArraySorted(arr, 0);
         // System.out.println(isSorted);
-
-        
+        System.out.println(firstOccurance(arr, 0, 9));
     }
 }
