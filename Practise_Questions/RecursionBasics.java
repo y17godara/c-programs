@@ -71,11 +71,27 @@ public class RecursionBasics {
     // function: print x to the power n
     public static int power(int x, int n) {
         if (n == 0) {
-          return 1;
+            return 1;
         } else {
-          return x * power(x, n - 1);
+            return x * power(x, n - 1);
         }
-      }
+    }
+
+    // function: optimized x to the power n
+    public static int optPower(int num, int n) {
+        if (n == 0) {
+            return 1;
+        }
+
+        int halfPower = optPower(num, n / 2) * optPower(num, n / 2);
+
+        // if n is odd
+        if (n % 2 != 0) {
+            halfPower = num * halfPower;
+        }
+
+        return halfPower;
+    }
 
     // main
     public static void main(String args[]) {
@@ -91,9 +107,9 @@ public class RecursionBasics {
         // System.out.println(firstOccurance(arr, 0, 8));
         // System.out.println(lastOccurance(arr, 4, 1));
 
-        // int n = 5;
+        int n = 5;
         // System.out.println(power(n, 3));
+        System.out.println(optPower(n, 3));
 
-        
     }
 }
