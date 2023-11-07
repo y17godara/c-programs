@@ -27,10 +27,10 @@ public class ArrayListExample {
         System.out.println(numbers);
     }
 
-    public static void part2(){
+    public static void part2() {
         ArrayList<Integer> nums = new ArrayList<>();
 
-        // print reverse 
+        // print reverse
         for (int i = 0; i < 10; i++) {
             nums.add(i);
         }
@@ -53,9 +53,30 @@ public class ArrayListExample {
         System.out.println(nums);
     }
 
-    
+    public static void part3() {
+        // Sorting an ArrayList
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(20);
+        numbers.add(15);
+        numbers.add(25);
+        numbers.add(5);
+        numbers.add(10);
+
+        // Sort the ArrayList
+        Collections.sort(numbers);
+
+        // Print the ArrayList
+        System.out.println(numbers);
+
+        // Sorting an ArrayList in descending order
+        Collections.sort(numbers, Collections.reverseOrder());
+
+        // Print the ArrayList
+        System.out.println(numbers);
+    }
+
 
     public static void main(String[] args) {
-        part2();
+        part3();
     }
 }
