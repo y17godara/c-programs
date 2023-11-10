@@ -19,6 +19,30 @@ class maxWater {
         return maxWater;
     }
 
+    // efficient approach using 2 pointer
+    public static int storeWaterPointer(ArrayList<Integer> height) {
+        int maxWater = 0;
+        int left = 0;
+        int right = height.size() - 1;
+
+        while (left < right) {
+            int ht = Math.min(height.get(right), height.get(left));
+            int wd = right - left;
+
+            int currentWater = ht * wd;
+
+            maxWater = Math.max(maxWater, currentWater);
+
+            if (height.get(left) < height.get(right)) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxWater;
+    }
+
     public static void main(String[] args) {
         // array list of building
         ArrayList<Integer> buildings = new ArrayList<>();
@@ -32,6 +56,6 @@ class maxWater {
         buildings.add(3);
         buildings.add(7);
         // print the array list
-        System.out.println(storeWaterBruteForce(buildings));
+        System.out.println(storeWaterPointer(buildings));
     }
 }
