@@ -75,6 +75,10 @@ public class ArrayListExample {
         System.out.println(numbers);
     }
 
+    public static void part4() {
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.add(5);
+    }
 
     public static void main(String[] args) {
         part3();
