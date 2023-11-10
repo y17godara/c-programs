@@ -13,6 +13,23 @@ public class pairSum {
         return -1;
     }
 
+    public static int pairSumPointer(ArrayList<Integer> arr, int target){
+        int left = 0;
+        int right = arr.size() - 1;
+
+        while(left < right){
+            if(arr.get(left) + arr.get(right) == target){
+                return 1;
+            }else if(arr.get(left) + arr.get(right) < target){
+                left++;
+            }else{
+                right--;
+            }
+        }
+
+        return -1;
+    }
+
     public static void main(String args[]) {
         ArrayList<Integer> arr = new ArrayList<>();
 
@@ -23,7 +40,8 @@ public class pairSum {
         arr.add(5);
         arr.add(6);
 
-        int target = 1;
-        System.out.println(pairSumBruteForce(arr, target));
+        int target = 3;
+        // System.out.println(pairSumBruteForce(arr, target));
+        System.out.println(pairSumPointer(arr, target));
     }
 }
