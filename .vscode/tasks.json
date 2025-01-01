@@ -23,6 +23,15 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "time execution",
+      "type": "shell",
+      "command": "mkdir -p output && g++ -std=c++17 -o output/${fileBasenameNoExtension} ${file} && time ./output/${fileBasenameNoExtension}",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
     }
   ],
   "version": "2.0.0"
