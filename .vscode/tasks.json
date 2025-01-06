@@ -7,7 +7,7 @@
       "args": [
         "-std=c++17",
         "-o",
-        "output\\${fileBasenameNoExtension}.exe",
+        "output/${fileBasenameNoExtension}",
         "${file}"
       ],
       "group": {
@@ -18,11 +18,7 @@
     {
       "label": "compile and run",
       "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-Command",
-        "mkdir -Force output; g++ -std=c++17 -o output\\${fileBasenameNoExtension}.exe ${file}; ./output/${fileBasenameNoExtension}.exe | tee output\\output.txt"
-      ],
+      "command": "mkdir -p output && g++ -std=c++17 -o output/${fileBasenameNoExtension} ${file} && ./output/${fileBasenameNoExtension} | tee output/output.txt",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -31,11 +27,7 @@
     {
       "label": "time execution",
       "type": "shell",
-      "command": "powershell",
-      "args": [
-        "-Command",
-        "mkdir -Force output; g++ -std=c++17 -o output\\${fileBasenameNoExtension}.exe ${file}; Measure-Command { ./output/${fileBasenameNoExtension}.exe }"
-      ],
+      "command": "mkdir -p output && g++ -std=c++17 -o output/${fileBasenameNoExtension} ${file} && time ./output/${fileBasenameNoExtension}",
       "group": {
         "kind": "build",
         "isDefault": false

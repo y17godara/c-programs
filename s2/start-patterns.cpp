@@ -152,7 +152,67 @@ void nNumberTriangle(int n) {
 // A B
 // A B C
 void nLetterTriangle(int n) {
- 
+ for(int i=1; i<=n; i++) {
+    for(int j=0; j<i; j++) {
+        // cout << char('A' + j - 1) << " ";
+       cout << static_cast<char>(65 + j) << " ";
+    }
+    cout << endl;
+ }
+}
+
+// A
+// B B
+// C C C
+void alphaRamp(int n) {
+    for(int i=0; i<=n; i++) {{
+        for(int j=0; j<i; j++) {
+            cout << char('A' + i - 1) << " ";
+        }
+        cout << endl;
+    }}
+}
+
+/*
+Output: 
+    A
+  A B A
+A B C B A
+*/
+void alphaHill(int n) {
+    for (int i=0; i<n; i++) {
+        for (int k = 1; k < n - i; k++) {
+            cout << "  ";
+        }
+
+        for (int k = 0; k <= i; k++ ){
+            cout << char('A' + k) << " ";
+        }
+
+        for (int k = i-1; k >= 0; k-- ) {
+            cout << char('A' + k) << " ";
+        }
+
+        for (int k = 1; k < n-1; k++) {
+            cout << "  ";
+        }
+
+        cout << endl;
+    }
+}
+
+// Sample Input 1:
+// 3
+// Sample Output 1:
+// C
+// C B 
+// C B A
+// Sample Input 2 :
+// 1
+// Sample Output 2 :
+// A
+void alphaTriangle(int n) {
+    // Write your code here.
 }
 
 int main() {
@@ -163,7 +223,10 @@ int main() {
     // nBinaryTriangle(4);
     // numberCrown(3);
     // nNumberTriangle(3);
-    nLetterTriangle(3);
+    // nLetterTriangle(3);
+    // alphaRamp(3);
+    // alphaHill(3);
+    alphaTriangle(3);
 
     return 0;
 }
