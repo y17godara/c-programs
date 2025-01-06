@@ -151,69 +151,33 @@ void nNumberTriangle(int n) {
 // A
 // A B
 // A B C
+// void nLetterTriangle(int n) {
+//  for(int i=1; i<=n; i++) {
+//     for(int j=1; j<=i; j++) {
+//        cout << char('A' + j - 1) << " ";
+//     }
+//     cout << endl;
+//  }
+// }
+
+// #2
 void nLetterTriangle(int n) {
- for(int i=1; i<=n; i++) {
-    for(int j=0; j<i; j++) {
-        // cout << char('A' + j - 1) << " ";
-       cout << static_cast<char>(65 + j) << " ";
-    }
-    cout << endl;
- }
-}
-
-// A
-// B B
-// C C C
-void alphaRamp(int n) {
-    for(int i=0; i<=n; i++) {{
-        for(int j=0; j<i; j++) {
-            cout << char('A' + i - 1) << " ";
+    for (int i = 1; i <= n; i++) { // Outer loop for rows
+        for (char ch = 'A'; ch <= 'A' + i - 1; ch++) { // Inner loop for letters
+            cout << ch << " ";
         }
-        cout << endl;
-    }}
-}
-
-/*
-Output: 
-    A
-  A B A
-A B C B A
-*/
-void alphaHill(int n) {
-    for (int i=0; i<n; i++) {
-        for (int k = 1; k < n - i; k++) {
-            cout << "  ";
-        }
-
-        for (int k = 0; k <= i; k++ ){
-            cout << char('A' + k) << " ";
-        }
-
-        for (int k = i-1; k >= 0; k-- ) {
-            cout << char('A' + k) << " ";
-        }
-
-        for (int k = 1; k < n-1; k++) {
-            cout << "  ";
-        }
-
-        cout << endl;
+        cout << endl; // Move to the next line
     }
 }
 
-// Sample Input 1:
-// 3
-// Sample Output 1:
-// C
-// C B 
-// C B A
-// Sample Input 2 :
-// 1
-// Sample Output 2 :
+// 
+// A B C
+// A B
 // A
-void alphaTriangle(int n) {
+void nLetterTriangle2(int n) {
     // Write your code here.
 }
+
 
 int main() {
     // printPatter1(5);
@@ -224,9 +188,7 @@ int main() {
     // numberCrown(3);
     // nNumberTriangle(3);
     // nLetterTriangle(3);
-    // alphaRamp(3);
-    // alphaHill(3);
-    alphaTriangle(3);
+    nLetterTriangle2(3);
 
     return 0;
 }
