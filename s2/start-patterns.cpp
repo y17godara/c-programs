@@ -351,15 +351,46 @@ void symmetry2(int n) {
 }
 
 // Input: ‘N’ = 4
+// 1 <= N <= 10^2
 // Output: 
 // ****
 // *  *
 // *  *
 // ****
 void getStarPattern(int n) {
-    // Write your code here.
+   // outer loop for no. of rows.
+     for(int i=0;i<n;i++){
+         
+         // inner loop for printing the stars at borders only.
+         for(int j=0;j<n;j++){
+             
+             if(i==0 || j==0 || i==n-1 || j==n-1)
+                cout<<"*";
+                
+             // if not border index, print space.
+             else cout<<" ";
+         }
+         
+          // As soon as the stars for each iteration are printed, we move to the
+          // next row and give a line break otherwise all stars
+          // would get printed in 1 line.
+          cout<<endl;
+     }
 }
 
+// Input: ‘N’ = 4
+// Output: 
+// 4444444
+// 4333334
+// 4322234
+// 4321234
+// 4322234
+// 4333334
+// 4444444
+
+void getNumberPattern(int n) {
+
+}
 
 int main()
 {
@@ -376,7 +407,8 @@ int main()
     // alphaTriangle(3);
     // symmetry(5);
     // symmetry2(3);
-    getStarPattern(4);
+    // getStarPattern(3);
+    getNumberPattern(3);
 
     return 0;
 }
