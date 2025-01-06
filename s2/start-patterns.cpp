@@ -179,6 +179,40 @@ void nLetterTriangle2(int n) {
 }
 
 
+// 
+
+/*
+Input: ‘N’ = 3
+Output: 
+C
+C B 
+C B A
+*/
+void alphaTriangle(int n) {
+    // Write your code here.
+    for(int i=1; i<=n; i++){
+        // for(int j=1; j<=i; j++){
+        //     cout << char('D'-j) << " ";
+        // }
+        for (int j=1; i>=j; j++){
+              cout << char('A' + (n - j)) << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Input: ‘N’ = 3
+// Output: 
+// * * * * * * 
+// * *     * * 
+// *         * 
+// *         * 
+// * *     * * 
+// * * * * * * 
+void symmetry(int n) {
+    // Write your code here.
+}
+
 int main() {
     // printPatter1(5);
     // nStarTriangle(5);
@@ -188,7 +222,10 @@ int main() {
     // numberCrown(3);
     // nNumberTriangle(3);
     // nLetterTriangle(3);
-    nLetterTriangle2(3);
+    // nLetterTriangle2(3);
+
+    // alphaTriangle(3);
+    symmetry(3);
 
     return 0;
 }
