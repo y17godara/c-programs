@@ -19,11 +19,25 @@ int countDigits(int n){
     }
 
     cout << "No of Digits: " << cnt;
-    return cnt
+    return cnt;
+}
+
+// Reverse Digits of A Number
+int reverseDigitsofANumber(int n) {
+    int rev;
+    return rev;
+}
+
+long reverseBits(long n) {
+    long revBits;
+    
+    return revBits;
 }
 
 int main(){
-    countDigits(35);
+    // countDigits(3);
+    reverseDigitsofANumber(3567);
+    reverseBits(55);
 
     return 0;
 }
