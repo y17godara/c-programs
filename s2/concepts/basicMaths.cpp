@@ -24,20 +24,24 @@ int countDigits(int n){
 
 // Reverse Digits of A Number
 int reverseDigitsofANumber(int n) {
-    int rev;
+    int rev = 0;
+    while (n > 0){
+        rev = rev * 10 + n % 10;
+        n = n / 10;
+    }
+    cout << "Rev Num: " << rev;
     return rev;
 }
 
-long reverseBits(long n) {
-    long revBits;
-    
-    return revBits;
+bool palindrome(int n)
+{
+    // Write your code here
 }
 
 int main(){
     // countDigits(3);
-    reverseDigitsofANumber(3567);
-    reverseBits(55);
+    // reverseDigitsofANumber(35567);
+    palindrome(343);
 
     return 0;
 }
